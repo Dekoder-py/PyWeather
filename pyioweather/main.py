@@ -76,6 +76,22 @@ def display_weather_art(condition):
 
 [/grey]"""
         )
+    elif (
+        condition == WEATHER_CODES[4000]
+        or condition == WEATHER_CODES[4001]
+        or condition == WEATHER_CODES[4200]
+        or condition == WEATHER_CODES[4201]
+    ):
+        print(
+            r"""
+           .--.
+         .-(    ).
+        (___.__)__)
+          ʻ ʻ ʻ ʻ
+          ʻ ʻ ʻ ʻ
+        """
+        )
+
     else:
         print("No ascii art.")
 
