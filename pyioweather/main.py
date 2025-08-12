@@ -93,7 +93,7 @@ def display_weather_art(condition):
         )
     elif condition == WEATHER_CODES[8000]:
         print(
-            r"""
+            r"""[blue]
            .--.
          .-(    ).
         (___.__)__)
