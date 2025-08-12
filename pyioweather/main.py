@@ -91,6 +91,16 @@ def display_weather_art(condition):
           ʻ ʻ ʻ ʻ
         """
         )
+    elif condition == WEATHER_CODES[8000]:
+        print(
+            r"""
+           .--.
+         .-(    ).
+        (___.__)__)
+           ⚡⚡
+          ʻ ʻ ʻ
+        """
+        )
 
     else:
         print("No ascii art.")
