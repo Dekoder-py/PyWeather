@@ -61,8 +61,12 @@ weather_codes = {
 if response.status_code == 200:
     content = response.json()
     values = content["data"]["values"]
+
+    print(f"Location:  {content['location']['name']}")
+
+    print(f"Current temperature: {values['temperature']}\u00b0C")
+
     condition = weather_codes[values["weatherCode"]]
-    print(f"The temperature in {location.title()} is {values['temperature']}\u00b0C")
     print(f"It is {condition}.")
     display_weather_art()
 elif response.status_code == 400:
