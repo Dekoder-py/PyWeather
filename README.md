@@ -23,7 +23,7 @@ python3 main.py
 ```
 
 You'll need to enter an API key from [Tomorrow.io](https://docs.tomorrow.io/reference/welcome) at runtime, or create a
-.env file with the following:
+.env file with the following (prior to running):
 
 ```dotenv
 TOMORROW_IO_API=*YOURKEYHERE*
