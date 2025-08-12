@@ -35,6 +35,8 @@ def display_weather_art():
 
 [/grey]"""
         )
+    else:
+        print("No ascii art.")
 
 
 load_dotenv()
@@ -60,7 +62,7 @@ if response.status_code == 200:
     content = response.json()
     values = content["data"]["values"]
     condition = weather_codes[values["weatherCode"]]
-    print(f"The temperature in {location} is {values['temperature']}")
+    print(f"The temperature in {location} is {values['temperature']}\u00b0C")
     print(f"It is {condition}.")
     display_weather_art()
 
