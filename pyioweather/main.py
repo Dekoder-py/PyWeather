@@ -54,13 +54,17 @@ def display_weather_art(condition):
 
 [/yellow]"""
         )
-    elif condition == WEATHER_CODES[1101] or condition == WEATHER_CODES[1102]:
+    elif (
+        condition == WEATHER_CODES[1001]
+        or condition == WEATHER_CODES[1101]
+        or condition == WEATHER_CODES[1102]
+    ):
         print(
             r"""[grey]
 
                                 
         +++++++                 
-      +        +++++++         
+      +        +++++++          
      +                 +       
      +                 ++      
    +++                 +++   
