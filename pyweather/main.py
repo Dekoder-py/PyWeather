@@ -56,34 +56,42 @@ def display_weather_art():
         print("No ascii art.")
 
 
-# api key
-load_dotenv()
-TOMORROW_IO_KEY = getenv("TOMORROW_IO_API") or input("Enter your Tomorrow.io API Key: ")
+def main():
+    # api key
+    load_dotenv()
+    TOMORROW_IO_KEY = getenv("TOMORROW_IO_API") or input(
+        "Enter your Tomorrow.io API Key: "
+    )
 
-# location
-location = input("Enter a location: ").lower()
+    # location
+    location = input("Enter a location: ").lower()
 
-# api call
-url = f"https://api.tomorrow.io/v4/weather/realtime?location={location}"
-headers = {
-    "content-type": "application/json",
-    "apikey": TOMORROW_IO_KEY,
-}
-response = requests.get(url, headers=headers)
+    # api call
+    url = f"https://api.tomorrow.io/v4/weather/realtime?location={location}"
+    headers = {
+        "content-type": "application/json",
+        "apikey": TOMORROW_IO_KEY,
+    }
+    response = requests.get(url, headers=headers)
 
-if response.status_code == 200:
-    clear_screen()
-    content = response.json()
-    values = content["data"]["values"]
+    if response.status_code == 200:
+        clear_screen()
 
-    print(f"Location:  {content['location']['name']}")
+        content = response.json()
+        values = content["data"]["values"]
 
-    print(f"Current temperature: {values['temperature']}\u00b0C")
+        print(f"Location:  {content['location']['name']}")
 
-    condition = WEATHER_CODES[values["weatherCode"]]
-    print(f"It is {condition}.")
-    display_weather_art()
-elif response.status_code == 400:
-    print("Invalid Location.")
-else:
-    print(f"Error: {response}")
+        print(f"Current temperature: {values['temperature']}\u00b0C")
+
+        condition = WEATHER_CODES[values["weatherCode"]]
+        print(f"It is {condition}.")
+        display_weather_art()
+    elif response.status_code == 400:
+        print("Invalid Location.")
+    else:
+        print(f"Error: {response}")
+
+
+if __name__ == "__main__":
+    main()
