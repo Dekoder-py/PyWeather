@@ -41,8 +41,8 @@ def display_weather_art():
 
 load_dotenv()
 
-TOMORROW_IO_KEY = getenv("TOMORROW_IO_API")
-location = "auckland"
+TOMORROW_IO_KEY = getenv("TOMORROW_IO_API") or input("Enter your Tomorrow.io API Key: ")
+location = input("Enter a location: ").lower()
 url = f"https://api.tomorrow.io/v4/weather/realtime?location={location}"
 headers = {
     "content-type": "application/json",
@@ -62,7 +62,7 @@ if response.status_code == 200:
     content = response.json()
     values = content["data"]["values"]
     condition = weather_codes[values["weatherCode"]]
-    print(f"The temperature in {location} is {values['temperature']}\u00b0C")
+    print(f"The temperature in {location.title()} is {values['temperature']}\u00b0C")
     print(f"It is {condition}.")
     display_weather_art()
 
