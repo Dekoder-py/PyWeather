@@ -60,22 +60,13 @@ def display_weather_art(condition):
         or condition == WEATHER_CODES[1102]
     ):
         print(
-            r"""[grey]
-
-                                
-        +++++++                 
-      +        +++++++          
-     +                 +       
-     +                 ++      
-   +++                 +++   
- ++                       ++ 
- +                         + 
- ++                      ++ 
-   ++++++++++++++++++++++   
-                                
-
-[/grey]"""
+            r"""
+           .--.
+         .-(    ).
+        (___.__)__)
+        """
         )
+
     elif (
         condition == WEATHER_CODES[4000]
         or condition == WEATHER_CODES[4001]
