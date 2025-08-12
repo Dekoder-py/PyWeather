@@ -65,6 +65,7 @@ if response.status_code == 200:
     print(f"The temperature in {location.title()} is {values['temperature']}\u00b0C")
     print(f"It is {condition}.")
     display_weather_art()
-
+elif response.status_code == 400:
+    print("Invalid Location.")
 else:
-    print(response)
+    print(f"Error: {response}")
