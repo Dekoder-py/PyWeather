@@ -80,7 +80,7 @@ def display_weather_art(condition):
         (___.__)__)
           ʻ ʻ ʻ ʻ
           ʻ ʻ ʻ ʻ
-        """
+        [/blue]"""
         )
     elif condition == WEATHER_CODES[8000]:
         print(
@@ -90,7 +90,7 @@ def display_weather_art(condition):
         (___.__)__)
            ⚡⚡
           ʻ ʻ ʻ
-        """
+        [/blue]"""
         )
 
     else:
