@@ -22,7 +22,7 @@ def clear_screen():
         _ = os.system("clear")
 
 
-def display_weather_art():
+def display_weather_art(condition):
     if condition == WEATHER_CODES[1000] or condition == WEATHER_CODES[1100]:
         print(
             r"""[yellow]
@@ -86,7 +86,7 @@ def main():
 
         condition = WEATHER_CODES[values["weatherCode"]]
         print(f"It is {condition}.")
-        display_weather_art()
+        display_weather_art(condition)
     elif response.status_code == 400:
         print("Invalid Location.")
     else:

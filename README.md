@@ -5,25 +5,18 @@ Written in python and uses the tomorrow.io api.
 
 ## Install
 
-1. Clone this repo:
-    ```bash
-    git clone https://github.com/dekoder-py/PyWeather
-    ```
-2. Install requirements:
-    ```bash
-    python3 -m pip install -r requirements.txt 
-    ```
+```bash
+python3 -m pip install pyioweather
+```
 
 ## Usage
 
-Run the main file:
-
 ```bash
-python3 main.py
+pyweather
 ```
 
-You'll need to enter an API key from [Tomorrow.io](https://docs.tomorrow.io/reference/welcome) at runtime, or create a
-.env file with the following (prior to running):
+You'll need to enter an API key from [Tomorrow.io](https://docs.tomorrow.io/reference/welcome) at runtime, or have a
+Tomorrow.io API key in your environment variables like this:
 
 ```dotenv
 TOMORROW_IO_API=*YOURKEYHERE*

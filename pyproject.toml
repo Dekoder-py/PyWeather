@@ -1,6 +1,6 @@
 [project]
-name = "pyweather"
-version = "0.0.1"
+name = "pyioweather"
+version = "0.0.11"
 description = "A CLI tool for fetching the current weather using Tomorrow.io"
 authors = [{ name = "Dekoder-py", email = "dekod3r.py@gmail.com" }]
 readme = "README.md"
