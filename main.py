@@ -29,16 +29,16 @@ if response.status_code == 200:
     condition = weather_codes[values["weatherCode"]]
     print(f"The temperature in {location} is {values['temperature']}")
     print(f"It is {condition}.")
-    if condition == weather_codes[1100]:
+    if condition == weather_codes[1000] or condition == weather_codes[1100]:
         print(
-            r"""
+            r"""[yellow]
   \   /  
    .-.   
 ― (   ) ―
    `-’   
   /   \  
 
-"""
+[/yellow]"""
         )
 
 else:
